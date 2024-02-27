@@ -40,3 +40,53 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+
+## Program
+```
+Developed by:AKASH M
+Register Number:212223240003
+```
+```
+def move_left(self):
+    # Move the agent to the left if possible
+    if self.location == "B":
+        self.location = "A"
+
+def move_right(self):
+    # Move the agent to the right if possible
+    if self.location == "A":
+        self.location = "B"
+
+def suck_dirt(self):
+    # Suck dirt in the current location if there is dirt
+    if self.dirt_status[self.location]:
+        self.dirt_status[self.location] = False
+        print(f"Sucked dirt in location {self.location}")
+
+def do_nothing(self):
+    # Do nothing
+    pass
+
+def perform_action(self, action):
+    # Perform the specified action
+    if action == "left":
+        self.move_left()
+    elif action == "right":
+        self.move_right()
+    elif action == "suck":
+        self.suck_dirt()
+    elif action == "nothing":
+        self.do_nothing()
+    else:
+        print("Invalid action")
+
+def print_status(self):
+    # Print the current status of the agent
+    print(f"Location: {self.location}, Dirt Status: {self.dirt_status}")
+```
+
+## Output
+![image](https://github.com/akashmano/19AI405ExpNo1/assets/137408306/6fe37587-a095-48f1-9f21-782e3925e2ff)
+
+## Result
+Thus the Developing AI Agent with PEAS Description was implemented using python programming.
